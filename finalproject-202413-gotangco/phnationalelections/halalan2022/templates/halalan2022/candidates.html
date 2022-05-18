@@ -1,0 +1,27 @@
+{%  extends 'halalan2022/base.html' %}
+
+{% block content %}
+<h1 class="text-center">List of Candidates</h1>
+<div class="col-12">
+    <table class="table table-striped mb-5">
+        <thead>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Nickname</th>
+            <th scope="col">Slogan</th>
+            <th scope="col">Position ID</th>
+        </thead>
+        <tbody>
+            {% for c in candidate %}
+            <tr>
+                <td> {{ c.first_name }} </td>
+                <td> {{ c.last_name }} </td>
+                <td> {{ c.nickname }} </td>
+                <td> {{ c.slogan }} </td>
+                <td> {{ c.position_id }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
